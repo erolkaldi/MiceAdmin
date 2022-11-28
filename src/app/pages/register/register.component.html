@@ -11,14 +11,14 @@
             <mat-card-content >
                 <mat-form-field appearance="outline" style="width:100%;">
                     <mat-label>{{'global.firstname' | transloco}}</mat-label>
-                    <input matInput type="text" id="name" [(ngModel)]="dto.firstName" required minlength="5">
+                    <input matInput type="text" id="name" [(ngModel)]="dto.firstName" required minlength="2">
                     <mat-icon matSuffix>description</mat-icon>
                   </mat-form-field>
             </mat-card-content>
             <mat-card-content >
                 <mat-form-field appearance="outline" style="width:100%;">
                     <mat-label>{{'global.lastname' | transloco}}</mat-label>
-                    <input matInput type="text" id="lastname" [(ngModel)]="dto.lastName" required minlength="5">
+                    <input matInput type="text" id="lastname" [(ngModel)]="dto.lastName" required minlength="2">
                     <mat-icon matSuffix>description</mat-icon>
                   </mat-form-field>
             </mat-card-content>
@@ -29,6 +29,7 @@
                     <mat-icon matSuffix>phone</mat-icon>
                   </mat-form-field>
             </mat-card-content>
+            
             <mat-card-actions>
               <button mat-flat-button color="primary" style="width: 100%;" (click)="tabClick()">{{'global.next' | transloco}}</button>
               <a href="login">{{'register.gotologin' | transloco}}</a>
@@ -57,6 +58,20 @@
                     <mat-label>{{'register.phone' | transloco}}</mat-label>
                     <input matInput type="text" id="phone" [(ngModel)]="dto.phone" required minlength="5">
                     <mat-icon matSuffix>phone</mat-icon>
+                  </mat-form-field>
+            </mat-card-content>
+            <mat-card-content>
+                <mat-form-field appearance="outline" style="width:100%;">
+                    <mat-label>{{'register.password' | transloco}}</mat-label>
+                    <input matInput type="password" id="password" [(ngModel)]="dto.password" required minlength="5">
+                    <mat-icon matSuffix>key</mat-icon>
+                  </mat-form-field>
+            </mat-card-content>
+            <mat-card-content>
+                <mat-form-field appearance="outline" style="width:100%;">
+                    <mat-label>{{'register.confirm' | transloco}}</mat-label>
+                    <input matInput type="password" id="confirm" [(ngModel)]="dto.confirmPassword" required minlength="5">
+                    <mat-icon matSuffix>key</mat-icon>
                   </mat-form-field>
             </mat-card-content>
             <mat-card-actions>

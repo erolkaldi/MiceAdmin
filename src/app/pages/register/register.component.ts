@@ -17,7 +17,7 @@ dto:RegisterDto=new RegisterDto();;
   }
 
   doregister(){
-
+console.log(this.dto)
   }
   tabClick() {
     const tabGroup = this.tab;
