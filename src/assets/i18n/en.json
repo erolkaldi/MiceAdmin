@@ -3,7 +3,14 @@
         "save":"Save",
         "cancel":"Cancel",
         "email":"Email",
-        "wellcome":"Wellcome"
+        "wellcome":"Wellcome",
+        "firstname":"First Name",
+        "lastname":"Last Name",
+        "next":"Next"
+    },
+    "messages":{
+        "passwordminlength":"Password must be atleast 5 characters",
+        "invalidemail":"Please enter valid email"
     },
     "login":{  
         "password":"Password",
@@ -15,11 +22,13 @@
         "logout":"Sign Out"
     },
     "register":{
-        "header":"Please enter company information",
         "gotologin":"Have an account ? Sign in here",
         "password":"Password",
         "confirm":"Confirm Password",
         "companyname":"Company Name",
-        "phone":"Phone Number"
+        "phone":"Phone Number",
+        "companyinfo":"Company Information",
+        "userinfo":"User Information"
+        
     }
 }

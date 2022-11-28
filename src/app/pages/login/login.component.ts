@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslocoService } from '@ngneat/transloco';
 import { LoginDto } from 'src/app/core/models/auth/loginDto';
 import { AlertService } from 'src/app/core/services/alert/alert.service';
 import { AuthService } from 'src/app/core/services/auth/auth.service';
@@ -15,7 +16,8 @@ export class LoginComponent implements OnInit {
     private storage: StorageService,
     private alertify: AlertService,
     private authService:AuthService,
-    private router:Router
+    private router:Router,
+    private translation:TranslocoService
   ) {}
   dto: LoginDto = { email: '', password: '' };
   ngOnInit(): void {
@@ -23,11 +25,11 @@ export class LoginComponent implements OnInit {
   }
   trylogin() {
     if (this.dto.email.length < 5) {
-      this.alertify.error('Please enter valid email');
+      this.alertify.error(this.translation.translate('messages.invalidemail'));
       return;
     }
     if (this.dto.password.length < 5) {
-      this.alertify.error('Password must be atleast 5 characters');
+      this.alertify.error(this.translation.translate('messages.passwordminlength'));
       return;
     }
     this.authService.signIn(this.dto).subscribe((response)=>{

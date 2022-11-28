@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatTabGroup } from '@angular/material/tabs';
 import { RegisterDto } from 'src/app/core/models/auth/registerDto';
 
 @Component({
@@ -6,8 +7,9 @@ import { RegisterDto } from 'src/app/core/models/auth/registerDto';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent implements OnInit {
 
+export class RegisterComponent implements OnInit {
+  @ViewChild("tab", { static: false }) tab: MatTabGroup;
   constructor() { }
 dto:RegisterDto=new RegisterDto();;
   ngOnInit(): void {
@@ -15,7 +17,12 @@ dto:RegisterDto=new RegisterDto();;
   }
 
   doregister(){
-    
-  }
 
+  }
+  tabClick() {
+    const tabGroup = this.tab;
+    if (!tabGroup || !(tabGroup instanceof MatTabGroup)) return;
+  
+    tabGroup.selectedIndex = 1;
+  }
 }
