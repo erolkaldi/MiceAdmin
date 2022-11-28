@@ -1,3 +1,24 @@
-{"login":{
-    "email":"E-Posta"
-}}
+{
+    "gloabal":{
+        "save":"Kaydet",
+        "cancel":"İptal",
+        "email":"E-Posta"
+        },
+    "login":{
+        "password":"Şifre",
+        "enter":"Giriş Yap",
+        "register":"Hesabınız yok mu?Buradan kayıt olun",
+        "wellcome":"Hoşgeldiniz",
+        "credentials":"Lütfen bilgilerinizi giriniz"
+        },
+    "navbar":{
+        "logout":"Çıkış Yap"
+        },
+    "register":{
+    "gotologin":"Hesabınız var mı? Buradan giriş yapın",
+    "password":"Şifre",
+    "confirm":"Şifre Tekrarı",
+    "companyname":"Şirket Adı",
+    "phone":"Telefon"
+        }
+}

@@ -9,8 +9,12 @@ import { FormsModule } from '@angular/forms';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import {MatMenuModule} from '@angular/material/menu';
 import { RegisterComponent } from './register/register.component';
-
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,12 @@ import { RegisterComponent } from './register/register.component';
     FormsModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatMenuModule,
+    MatCardModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatDialogModule
     
   ],
   exports:[NavbarComponent],

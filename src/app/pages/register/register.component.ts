@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RegisterDto } from 'src/app/core/models/auth/registerDto';
 
 @Component({
   selector: 'app-register',
@@ -8,8 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class RegisterComponent implements OnInit {
 
   constructor() { }
-
+dto:RegisterDto=new RegisterDto();;
   ngOnInit(): void {
+    
+  }
+
+  doregister(){
+    
   }
 
 }
