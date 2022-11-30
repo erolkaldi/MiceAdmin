@@ -14,6 +14,8 @@ export class NavbarComponent implements OnInit {
     router.events.subscribe((val) => {
       if(authService.isLoggedIn()){
         this.loggedIn=true;
+        this.userName=this.storage.getString("user_name") ?? "";
+    this.companyName=this.storage.getString("company_name") ?? "Mice Admin";
       }
       else{
         this.loggedIn=false;
@@ -22,8 +24,20 @@ export class NavbarComponent implements OnInit {
   }
   loggedIn:boolean = false;
 userName:string="";
+activeLanguage:string="tr";
+companyName:string="Mice Admin";
   ngOnInit(): void {
-    this.userName=this.storage.getString("user_name") ?? "";
+    this.activeLanguage=this.storage.getString("active_language") ?? "tr";
   }
-
+dologout(){
+  this.storage.removeItem("access_token");
+  this.storage.removeItem("company_name");
+  this.storage.removeItem("user_name");
+  window.location.reload();
+}
+changeLanguage(lang:string){
+this.storage.setString("active_language",lang);
+this.activeLanguage=lang;
+window.location.reload();
+}
 }

@@ -27,13 +27,13 @@ export class TranslocoHttpLoader implements TranslocoLoader {
       useValue: translocoConfig({
         availableLangs: ['en', 'tr'],
         defaultLang:
-        localStorage.getItem('activeLang') === null
+        localStorage.getItem('active_language') === null
                         ? 'tr'
-                        : window.localStorage.getItem('activeLang')?? 'en',
+                        : window.localStorage.getItem('active_language')?? 'tr',
                 fallbackLang:
-                    localStorage.getItem('activeLang') === null
-                        ? 'en'
-                        : window.localStorage.getItem('activeLang')?? 'en',
+                    localStorage.getItem('active_language') === null
+                        ? 'tr'
+                        : window.localStorage.getItem('active_language')?? 'tr',
         reRenderOnLangChange: true,
         prodMode: environment.production,
       })

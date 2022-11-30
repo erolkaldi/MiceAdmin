@@ -10,7 +10,12 @@
     },
     "messages":{
         "passwordminlength":"Password must be atleast 5 characters",
-        "invalidemail":"Please enter valid email"
+        "invalidemail":"Please enter valid email",
+        "emptyfield":"Please fill all fields",
+        "error":"Error!",
+        "warning":"Warning!",
+        "success":"Successfull",
+        "ok":"OK"
     },
     "login":{  
         "password":"Password",
@@ -28,7 +33,8 @@
         "companyname":"Company Name",
         "phone":"Phone Number",
         "companyinfo":"Company Information",
-        "userinfo":"User Information"
-        
+        "userinfo":"User Information",
+        "confirmnotmatch":"Confirm Pasword is wrong",
+        "completed":"You have been registered successfully.Please check your email for confirmation"
     }
 }

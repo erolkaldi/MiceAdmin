@@ -15,7 +15,7 @@ export class AuthService {
   accessToken: string="";
 
 getaccessToken(): string {
-    return localStorage.getItem('accessToken') ?? '';
+    return localStorage.getItem('access_token') ?? '';
 }
 signIn(credentials: LoginDto): Observable<any> {
   // Throw error, if the user is already logged in
@@ -26,7 +26,7 @@ signIn(credentials: LoginDto): Observable<any> {
       switchMap((response: any) => {
 
           this.accessToken = response.AccessToken;
-          localStorage.setItem('accessToken', this.accessToken);
+          localStorage.setItem('access_token', this.accessToken);
           this._authenticated = true;
           return of(response);
       })
@@ -34,7 +34,7 @@ signIn(credentials: LoginDto): Observable<any> {
 }
 
 isLoggedIn(): boolean {
-  if (localStorage.getItem('accessToken')) {
+  if (localStorage.getItem('access_token')) {
 
       return true;
   }
@@ -43,7 +43,7 @@ isLoggedIn(): boolean {
 }
 
 signOut() {
-  localStorage.removeItem('accessToken');
+  localStorage.removeItem('access_token');
   this._authenticated = false;
 }
 }

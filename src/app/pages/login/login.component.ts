@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { TranslocoService } from '@ngneat/transloco';
 import { LoginDto } from 'src/app/core/models/auth/loginDto';
@@ -17,7 +18,8 @@ export class LoginComponent implements OnInit {
     private alertify: AlertService,
     private authService:AuthService,
     private router:Router,
-    private translation:TranslocoService
+    private translation:TranslocoService,
+    private titleService:Title
   ) {}
   dto: LoginDto = { email: '', password: '' };
   ngOnInit(): void {
@@ -33,12 +35,15 @@ export class LoginComponent implements OnInit {
       return;
     }
     this.authService.signIn(this.dto).subscribe((response)=>{
-      if(response.accessToken==''){
+      if(!response.success){
         this.alertify.error(response.message)
        }
        else{
-        this.storage.setString('accessToken',response.accessToken);
+        this.storage.setString('access_token',response.data.access_Token);
         this.storage.setString('email',this.dto.email);
+        this.storage.setString('user_name',response.data.name);
+        this.storage.setString('company_name',response.data.company);
+        this.titleService.setTitle(response.data.company);
         this.router.navigate(['home'])
        }
     });

@@ -11,7 +11,7 @@
             <mat-card-content >
                 <mat-form-field appearance="outline" style="width:100%;">
                     <mat-label>{{'global.firstname' | transloco}}</mat-label>
-                    <input matInput type="text" id="name" [(ngModel)]="dto.firstName" required minlength="2">
+                    <input matInput type="text" id="firstname" [(ngModel)]="dto.firstName" required minlength="2">
                     <mat-icon matSuffix>description</mat-icon>
                   </mat-form-field>
             </mat-card-content>
@@ -31,7 +31,7 @@
             </mat-card-content>
             
             <mat-card-actions>
-              <button mat-flat-button color="primary" style="width: 100%;" (click)="tabClick()">{{'global.next' | transloco}}</button>
+              <button mat-flat-button color="primary" style="width: 100%;margin-bottom: 7px;" (click)="tabClick(1)">{{'global.next' | transloco}}</button>
               <a href="login">{{'register.gotologin' | transloco}}</a>
             </mat-card-actions>
           </mat-card>

@@ -10,7 +10,12 @@
         },
         "messages":{
             "passwordminlength":"Şifre en az 5 karakter olmalıdır",
-            "invalidemail":"Lütfen geçerli bir eposta giriniz"
+            "invalidemail":"Lütfen geçerli bir eposta giriniz",
+            "emptyfield":"Lütfen tüm alanları doldurunuz",
+            "error":"Hata!",
+        "warning":"Dikkat!",
+        "success":"Başarılı",
+        "ok":"Tamam"
         },
     "login":{
         "password":"Şifre",
@@ -28,6 +33,8 @@
     "companyname":"Şirket Adı",
     "phone":"Telefon",
     "companyinfo":"Şirket Bilgileri",
-    "userinfo":"Kullanıcı Bilgileri"
+    "userinfo":"Kullanıcı Bilgileri",
+    "confirmnotmatch":"Şifre tekrarı hatalı",
+    "completed":"Kaydınız başarılı bir şekilde gerçekleşti.Lütfen eposta hesabınızı kontrol ediniz"
         }
 }
