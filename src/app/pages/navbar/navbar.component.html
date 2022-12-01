@@ -1,4 +1,7 @@
 <mat-toolbar color="primary">
+  <button mat-icon-button color="accent" *ngIf="loggedIn" (click)="showMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
     <img src="../../../assets/images/m2.png">
     <span class="narrowhide">{{companyName}}</span>
     <span class="spacer"></span>

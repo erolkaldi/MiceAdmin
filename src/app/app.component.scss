@@ -1,0 +1,29 @@
+
+.mat-sidenav-container{
+    height: 100%!important;
+}
+.mat-sidenav{
+    background-color: beige;
+    height: 100%!important;
+}
+@media only screen and (max-width: 350px ) {
+    .mat-sidenav{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 600px) and ( min-width: 350px) {
+    .mat-sidenav{
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 1200px) and ( min-width: 600px) {
+    .mat-sidenav{
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .mat-sidenav{
+        width: 20%;
+    }
+}
