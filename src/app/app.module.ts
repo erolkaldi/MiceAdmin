@@ -9,7 +9,6 @@ import { PagesModule } from './pages/pages.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { SidenavService } from './core/sidenav/sidenav.service';
-import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -22,8 +21,7 @@ import {MatListModule} from '@angular/material/list';
     PagesModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatSidenavModule,
-    MatListModule
+    MatSidenavModule
   ],
   providers: [SidenavService],
   bootstrap: [AppComponent]

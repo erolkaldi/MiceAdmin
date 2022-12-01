@@ -24,7 +24,8 @@
         "credentials":"Lütfen bilgilerinizi giriniz"
         },
     "navbar":{
-        "logout":"Çıkış Yap"
+        "logout":"Çıkış Yap",
+        "search":"Menü de arama yapın"
         },
     "register":{
     "gotologin":"Hesabınız var mı? Buradan giriş yapın",

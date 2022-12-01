@@ -1,0 +1,14 @@
+<mat-form-field class="search">
+    <input matInput type="email" id="email" required minlength="5" autocomplete="off" >
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+<mat-nav-list>
+  <mat-list-item
+    class="navitem"  
+    *ngFor="let item of items; order"
+    (click)="navigate(item.Url)"
+  >
+    <mat-icon class="navicon" mat-list-icon>{{ item.Icon }}</mat-icon>
+    {{ item.Name }}</mat-list-item
+  >
+</mat-nav-list>

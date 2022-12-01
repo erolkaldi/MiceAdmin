@@ -1,10 +1,12 @@
 
 .mat-sidenav-container{
-    height: 100%!important;
+    height: 100%;
 }
 .mat-sidenav{
-    background-color: beige;
-    height: 100%!important;
+    background: #7c5ab3;
+    background: linear-gradient(0deg,#beacda 0,#7c5ab3 100%);
+    margin: 30px;
+    border-radius: 5px;
 }
 @media only screen and (max-width: 350px ) {
     .mat-sidenav{

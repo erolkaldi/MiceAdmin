@@ -24,7 +24,8 @@
         "credentials":"Please enter your credentials"
     },
     "navbar":{
-        "logout":"Sign Out"
+        "logout":"Sign Out", 
+        "search":"Search here"
     },
     "register":{
         "gotologin":"Have an account ? Sign in here",

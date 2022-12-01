@@ -16,13 +16,16 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatTabsModule} from '@angular/material/tabs';
+import { SidemenuComponent } from './sidemenu/sidemenu.component';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
     LoginComponent,
     HomeComponent,
     NavbarComponent,
-    RegisterComponent
+    RegisterComponent,
+    SidemenuComponent
   ],
   imports: [
     CommonModule,
@@ -37,10 +40,11 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatInputModule,
     MatFormFieldModule,
     MatDialogModule,
-    MatTabsModule
+    MatTabsModule,
+    MatListModule
     
   ],
-  exports:[NavbarComponent],
+  exports:[NavbarComponent,SidemenuComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
