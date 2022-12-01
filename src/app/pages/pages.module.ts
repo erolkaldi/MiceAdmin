@@ -18,6 +18,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatTabsModule} from '@angular/material/tabs';
 import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import {MatListModule} from '@angular/material/list';
+import { MenuFilterPipe } from './pipes/menu-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {MatListModule} from '@angular/material/list';
     HomeComponent,
     NavbarComponent,
     RegisterComponent,
-    SidemenuComponent
+    SidemenuComponent,
+    MenuFilterPipe
   ],
   imports: [
     CommonModule,

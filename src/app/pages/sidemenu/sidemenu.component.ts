@@ -11,10 +11,11 @@ import { SidenavService } from 'src/app/core/sidenav/sidenav.service';
 export class SidemenuComponent implements OnInit {
 
   constructor(private router:Router,private sidenav:SidenavService) { }
-items:MenuItem[]=[{Name:"Home",Url:"home",Icon:"home",Order:0},
-{Name:"Dashboard",Url:"home",Icon:"dashboard",Order:0},
-{Name:"Events",Url:"home",Icon:"calendar_month",Order:0},
-{Name:"Settings",Url:"home",Icon:"settings",Order:0}
+  filterArgs={Name:""}
+items:MenuItem[]=[{Name:"Home",Url:"home",Icon:"home",Search:"home",Order:0},
+{Name:"Dashboard",Url:"home",Icon:"dashboard",Search:"dashboard",Order:0},
+{Name:"Events",Url:"home",Icon:"calendar_month",Search:"events",Order:0},
+{Name:"Settings",Url:"home",Icon:"settings",Search:"settings",Order:0}
 
 ]
   ngOnInit(): void {
@@ -23,5 +24,9 @@ items:MenuItem[]=[{Name:"Home",Url:"home",Icon:"home",Order:0},
 navigate(url:string){
   this.router.navigate([url]);
   this.sidenav.toggle();
+  this.clearSearch();
+}
+clearSearch(){
+  this.filterArgs.Name=""
 }
 }
