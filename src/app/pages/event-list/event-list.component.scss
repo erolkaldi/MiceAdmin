@@ -1,0 +1,21 @@
+.table{
+    width: 80%;
+    word-wrap: break-word;
+    
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mat-cell{
+    padding-left: 3px;
+}
+.left-margin{
+    margin-left: 5px;
+}
+
+.pull-right{
+    text-align: right;
+}

@@ -12,10 +12,9 @@ export class SidemenuComponent implements OnInit {
 
   constructor(private router:Router,private sidenav:SidenavService) { }
   filterArgs={Name:""}
-items:MenuItem[]=[{Name:"Home",Url:"home",Icon:"home",Search:"home",Order:0},
-{Name:"Dashboard",Url:"home",Icon:"dashboard",Search:"dashboard",Order:0},
-{Name:"Events",Url:"home",Icon:"calendar_month",Search:"events",Order:0},
-{Name:"Settings",Url:"home",Icon:"settings",Search:"settings",Order:0}
+items:MenuItem[]=[{Name:"pages.home",Url:"home",Icon:"home",Search:"home",Order:0},
+{Name:"pages.events",Url:"events",Icon:"calendar_month",Search:"events",Order:1},
+{Name:"pages.settings",Url:"settings",Icon:"settings",Search:"settings",Order:2}
 
 ]
   ngOnInit(): void {

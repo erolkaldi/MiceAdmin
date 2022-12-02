@@ -3,8 +3,7 @@
     <mat-icon>menu</mat-icon>
   </button>
     <img src="../../../assets/images/mtlogo.png">
-    <span class="narrowhide">{{companyName}}</span>
-    <span class="spacer"></span>
+    <span class="spacer">{{page|transloco}}</span>
     <mat-button class="narrowhide" *ngIf="loggedIn" style="padding-right: 5px;">{{userName}}</mat-button>
     <button mat-mini-fab color="basic" [matMenuTriggerFor]="menu" *ngIf="loggedIn" style="margin-right: 10px;">
       <mat-icon class="trioicon">account_circle</mat-icon>

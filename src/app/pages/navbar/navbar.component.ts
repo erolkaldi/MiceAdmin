@@ -20,8 +20,7 @@ export class NavbarComponent implements OnInit {
       if (authService.isLoggedIn()) {
         this.loggedIn = true;
         this.userName = this.storage.getString('user_name') ?? '';
-        this.companyName =
-          this.storage.getString('company_name') ?? 'Micetrio';
+        this.page='pages'+router.url.replace('/','.');
       } else {
         this.loggedIn = false;
       }
@@ -30,7 +29,7 @@ export class NavbarComponent implements OnInit {
   loggedIn: boolean = false;
   userName: string = '';
   activeLanguage: string = 'tr';
-  companyName: string = 'Micetrio';
+  page:string="Home"
   ngOnInit(): void {
     this.activeLanguage = this.storage.getString('active_language') ?? 'tr';
   }

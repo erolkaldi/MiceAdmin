@@ -1,0 +1,84 @@
+<div class="content">
+  <table mat-table [dataSource]="events" class="table">
+    <ng-container matColumnDef="code">
+      <th mat-header-cell *matHeaderCellDef>
+        {{ "columns.code" | transloco }}
+      </th>
+      <td mat-cell *matCellDef="let element">{{ element.code }}</td>
+    </ng-container>
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>
+        {{ "columns.name" | transloco }}
+      </th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+    <ng-container matColumnDef="begin">
+      <th mat-header-cell *matHeaderCellDef>
+        {{ "columns.begindate" | transloco }}
+      </th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.beginDate | date : "dd.MM.yyyy" }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="end">
+      <th mat-header-cell *matHeaderCellDef>
+        {{ "columns.enddate" | transloco }}
+      </th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.endDate | date : "dd.MM.yyyy" }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="type">
+      <th mat-header-cell *matHeaderCellDef>
+        {{ "columns.type" | transloco }}
+      </th>
+      <td mat-cell *matCellDef="let element">{{ element.eventType }}</td>
+    </ng-container>
+    <ng-container matColumnDef="buttons">
+      <th class="pull-right" mat-header-cell *matHeaderCellDef>
+        <button
+          matTooltip="{{ 'buttons.add' | transloco }}"
+          matTooltipPosition="left"
+          matTooltipClass="tooltip-uppercase"
+          mat-mini-fab
+          color="default"
+        >
+          <mat-icon>add</mat-icon>
+        </button>
+        <button
+          class="left-margin"
+          mat-mini-fab
+          color="default"
+          matTooltip="{{ 'buttons.print' | transloco }}"
+          matTooltipPosition="right"
+          matTooltipClass="tooltip-uppercase"
+        >
+          <mat-icon>printer</mat-icon>
+        </button>
+      </th>
+      <td class="pull-right" mat-cell *matCellDef="let element">
+        <button
+          mat-mini-fab
+          color="default"
+          matTooltip="{{ 'buttons.edit' | transloco }}"
+          matTooltipPosition="left"
+          matTooltipClass="tooltip-uppercase"
+        >
+          <mat-icon>edit_note</mat-icon>
+        </button>
+        <button
+          class="left-margin"
+          mat-mini-fab
+          color="default"
+          matTooltip="{{ 'buttons.delete' | transloco }}"
+          matTooltipPosition="right"
+          matTooltipClass="tooltip-uppercase"
+        >
+          <mat-icon>delete_forever</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

@@ -10,6 +10,6 @@ export class MenuFilterPipe implements PipeTransform {
         if (!items || !filter) {
             return items;
         }
-        return items.filter(item => (item.Search.indexOf(filter.Name) !== -1)||(item.Name.indexOf(filter.Name) !== -1));
+        return items.filter(item => item.Search.indexOf(filter.Name) !== -1);
     }
 }

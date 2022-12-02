@@ -37,5 +37,23 @@
     "userinfo":"Kullanıcı Bilgileri",
     "confirmnotmatch":"Şifre tekrarı hatalı",
     "completed":"Kaydınız başarılı bir şekilde gerçekleşti.Lütfen eposta hesabınızı kontrol ediniz"
+        },
+        "pages":{
+            "home":"Anasayfa",
+            "events":"Etkinlikler",
+            "settings":"Ayarlar"
+        },
+        "columns":{
+            "code":"Kodu",
+            "name":"Adı",
+            "begindate":"Başlangıç",
+            "enddate":"Bitiş",
+            "type":"Tipi"
+        },
+        "buttons":{
+            "add":"Yeni Kayıt",
+            "edit":"Düzenle",
+            "delete":"Sil",
+            "print":"Yazdır"
         }
 }

@@ -1,6 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { Router } from '@angular/router';
 import { SidenavService } from './core/sidenav/sidenav.service';
 
 @Component({
@@ -11,13 +10,8 @@ import { SidenavService } from './core/sidenav/sidenav.service';
 
 export class AppComponent {
   @ViewChild("sidenav", { static: false })  sidenav:MatSidenav
-  constructor(private router:Router,public sidenavService:SidenavService) { 
-    router.events.subscribe((val) => {
-      console.log('route='+router.url)
-      if(router.url=='/register' || router.url=='/login'){
-        
-      }
-  });
+  constructor(public sidenavService:SidenavService) { 
+    
   }
   ngAfterViewInit(): void {
     this.sidenavService.setSidenav(this.sidenav);

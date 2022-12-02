@@ -19,6 +19,10 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import {MatListModule} from '@angular/material/list';
 import { MenuFilterPipe } from './pipes/menu-filter.pipe';
+import { EventListComponent } from './event-list/event-list.component';
+import { SettingsComponent } from './settings/settings.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,9 @@ import { MenuFilterPipe } from './pipes/menu-filter.pipe';
     NavbarComponent,
     RegisterComponent,
     SidemenuComponent,
-    MenuFilterPipe
+    MenuFilterPipe,
+    EventListComponent,
+    SettingsComponent
   ],
   imports: [
     CommonModule,
@@ -43,7 +49,9 @@ import { MenuFilterPipe } from './pipes/menu-filter.pipe';
     MatFormFieldModule,
     MatDialogModule,
     MatTabsModule,
-    MatListModule
+    MatListModule,
+    MatTableModule,
+    MatTooltipModule
     
   ],
   exports:[NavbarComponent,SidemenuComponent],

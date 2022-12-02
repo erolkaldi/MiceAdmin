@@ -37,5 +37,23 @@
         "userinfo":"User Information",
         "confirmnotmatch":"Confirm Pasword is wrong",
         "completed":"You have been registered successfully.Please check your email for confirmation"
+    },
+    "pages":{
+        "home":"Home",
+        "events":"Events",
+        "settings":"Settings"
+    },
+    "columns":{
+        "code":"Code",
+        "name":"Name",
+        "begindate":"Begin Date",
+        "enddate":"End Date",
+        "type":"Type"
+    },
+    "buttons":{
+        "add":"Add New",
+        "edit":"Edit",
+        "delete":"Delete",
+        "print":"Print"
     }
 }
