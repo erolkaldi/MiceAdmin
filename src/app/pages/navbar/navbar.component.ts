@@ -21,7 +21,7 @@ export class NavbarComponent implements OnInit {
         this.loggedIn = true;
         this.userName = this.storage.getString('user_name') ?? '';
         this.companyName =
-          this.storage.getString('company_name') ?? 'Mice Admin';
+          this.storage.getString('company_name') ?? 'Micetrio';
       } else {
         this.loggedIn = false;
       }
@@ -30,7 +30,7 @@ export class NavbarComponent implements OnInit {
   loggedIn: boolean = false;
   userName: string = '';
   activeLanguage: string = 'tr';
-  companyName: string = 'Mice Admin';
+  companyName: string = 'Micetrio';
   ngOnInit(): void {
     this.activeLanguage = this.storage.getString('active_language') ?? 'tr';
   }

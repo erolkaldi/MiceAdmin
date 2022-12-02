@@ -10,8 +10,6 @@ export class MenuFilterPipe implements PipeTransform {
         if (!items || !filter) {
             return items;
         }
-        // filter items array, items which match and return true will be
-        // kept, false will be filtered out
         return items.filter(item => (item.Search.indexOf(filter.Name) !== -1)||(item.Name.indexOf(filter.Name) !== -1));
     }
 }
