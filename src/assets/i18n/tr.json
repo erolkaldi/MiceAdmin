@@ -15,7 +15,9 @@
     "error": "Hata!",
     "warning": "Dikkat!",
     "success": "Başarılı",
-    "ok": "Tamam"
+    "ok": "Tamam",
+    "askdelete":"Silinecek emin misiniz?",
+    "acceptdelete":"Evet sil!"
   },
   "login": {
     "password": "Şifre",
@@ -42,7 +44,9 @@
     "home": "Anasayfa",
     "events": "Etkinlikler",
     "settings": "Ayarlar",
-    "eventedit": "Etkinlik Düzenleme"
+    "eventedit": "Etkinlik Düzenleme",
+    "users":"Kullanıcılar",
+    "useredit":"Kullanıcı Düzenleme"
   },
   "columns": {
     "code": "Kodu",
@@ -55,7 +59,8 @@
     "contact":"Sorumlu Personel",
     "email":"E-Posta",
     "phone": "Telefon",
-    "feetype":"Ücret Tipi"
+    "feetype":"Ücret Tipi",
+    "blocked":"Bloklandı"
   },
   "buttons": {
     "add": "Yeni Kayıt",

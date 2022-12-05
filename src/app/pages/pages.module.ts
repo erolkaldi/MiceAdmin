@@ -31,6 +31,9 @@ import { FORMATS } from '../core/models/date-format/formats';
 import {MatSelectModule} from '@angular/material/select';
 import { EventTypePipe } from './pipes/event-type-pipe';
 import { FeeTypePipe } from './pipes/fee-type-pipe';
+import { UserListComponent } from './users/user-list.component';
+import { UserEditDialog } from './users/user-edit/user-edit';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -44,7 +47,9 @@ import { FeeTypePipe } from './pipes/fee-type-pipe';
     SettingsComponent,
     EventEditDialog,
     EventTypePipe,
-    FeeTypePipe
+    FeeTypePipe,
+    UserListComponent,
+    UserEditDialog
   ],
   imports: [
     CommonModule,
@@ -66,7 +71,8 @@ import { FeeTypePipe } from './pipes/fee-type-pipe';
     MatPaginatorModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCheckboxModule
     
   ],
   providers:[{provide: MAT_DATE_FORMATS, useValue: FORMATS}],

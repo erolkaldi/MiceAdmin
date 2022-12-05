@@ -15,7 +15,9 @@
     "error": "Error!",
     "warning": "Warning!",
     "success": "Successfull",
-    "ok": "OK"
+    "ok": "OK",
+    "askdelete":"Are you sure to delete?",
+    "acceptdelete":"Yes delete it!"
   },
   "login": {
     "password": "Password",
@@ -42,7 +44,9 @@
     "home": "Home",
     "events": "Events",
     "settings": "Settings",
-    "eventedit": "Event Edit"
+    "eventedit": "Event Edit",
+    "users":"Users",
+    "useredit":"User Edit"
   },
   "columns": {
     "code": "Code",
@@ -55,7 +59,8 @@
     "contact":"Contact Person",
     "email":"Email",
     "phone":"Phone Number",
-    "feetype":"Fee Type"
+    "feetype":"Fee Type",
+    "blocked":"Blocked"
   },
   "buttons": {
     "add": "Add New",

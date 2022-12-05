@@ -4,6 +4,8 @@ import { Event } from 'src/app/core/models/event/event';
 import { EventEditDialog } from './event-edit/event-edit';
 import {MatTableDataSource} from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
+import Swal from 'sweetalert2';
+import { TranslocoService } from '@ngneat/transloco';
 
 @Component({
   selector: 'app-event-list',
@@ -12,7 +14,7 @@ import { MatPaginator } from '@angular/material/paginator';
 })
 export class EventListComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog,private translation:TranslocoService) { }
 events:Event[]=[]
 displayedColumns: string[] = ['code', 'name', 'begin', 'end','type','fee','buttons'];
 dataSource = new MatTableDataSource<Event>([]);
@@ -38,6 +40,22 @@ dataSource = new MatTableDataSource<Event>([]);
     }
     this.dataSource.paginator = this.paginator;
     this.dataSource.data=this.events;
+  }
+
+  deleteEvent(event:Event){
+    Swal.fire({
+      title: this.translation.translate('messages.warning'),
+      text: this.translation.translate('messages.askdelete'),
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: this.translation.translate('messages.acceptdelete'),
+    }).then((result) => {
+      if (result.isConfirmed) {
+        //delete it
+      }
+    })
   }
   createNew(){
     let event=new Event();

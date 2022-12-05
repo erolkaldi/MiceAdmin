@@ -1,0 +1,91 @@
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="table">
+      <ng-container matColumnDef="firstname">
+        <th mat-header-cell *matHeaderCellDef>
+          {{ "global.firstname" | transloco }}
+        </th>
+        <td mat-cell *matCellDef="let element">{{ element.firstName }}</td>
+      </ng-container>
+      <ng-container matColumnDef="lastname">
+        <th mat-header-cell *matHeaderCellDef>
+          {{ "global.lastname" | transloco }}
+        </th>
+        <td mat-cell *matCellDef="let element">{{ element.lastName }}</td>
+      </ng-container>
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>
+          {{ "columns.email" | transloco }}
+        </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.email }}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef>
+          {{ "columns.phone" | transloco }}
+        </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.phone }}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="blocked">
+        <th mat-header-cell *matHeaderCellDef>
+          {{ "columns.blocked" | transloco }}
+        </th>
+        <td mat-cell *matCellDef="let element">{{ element.blocked }}</td>
+      </ng-container>
+      
+      <ng-container matColumnDef="buttons">
+        <th class="pull-right" mat-header-cell *matHeaderCellDef>
+          <button
+            matTooltip="{{ 'buttons.add' | transloco }}"
+            matTooltipPosition="left"
+            matTooltipClass="tooltip-uppercase"
+            mat-mini-fab
+            color="default"
+            (click)="createNew()"
+          >
+            <mat-icon>add</mat-icon>
+          </button>
+          <button
+            class="left-margin"
+            mat-mini-fab
+            color="default"
+            let 
+            matTooltip="{{ 'buttons.print' | transloco }}"
+            matTooltipPosition="right"
+            matTooltipClass="tooltip-uppercase"
+          >
+            <mat-icon>printer</mat-icon>
+          </button>
+        </th>
+        <td class="pull-right" mat-cell *matCellDef="let element">
+          <button
+            mat-mini-fab
+            color="default"
+            matTooltip="{{ 'buttons.edit' | transloco }}"
+            matTooltipPosition="left"
+            matTooltipClass="tooltip-uppercase"
+            (click)="openDialog(element)"
+          >
+            <mat-icon>edit_note</mat-icon>
+          </button>
+          <button
+            class="left-margin"
+            mat-mini-fab
+            color="default"
+            matTooltip="{{ 'buttons.delete' | transloco }}"
+            matTooltipPosition="right"
+            matTooltipClass="tooltip-uppercase"
+            (click)="deleteUser(element)"
+          >
+            <mat-icon>delete_forever</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+    <mat-paginator #paginator [pageSizeOptions]="[10,15,30]" showFirstLastButtons ></mat-paginator>
+  </div>
+  

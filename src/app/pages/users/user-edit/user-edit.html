@@ -1,0 +1,38 @@
+<h2 mat-dialog-title>{{'pages.useredit'|transloco}}</h2>
+<mat-dialog-content class="mat-typography">
+  <mat-card style="margin: 5px">
+    <mat-card-content>
+      <div class="col-md-2">
+        <div class="row">
+          <mat-form-field appearance="outline">
+            <mat-label>{{'global.firstname' | transloco}}</mat-label>
+            <input matInput type="text" id="firstname" [(ngModel)]="user.firstName" />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>{{'global.lastname' | transloco}}</mat-label>
+            <input matInput type="text" id="lastname" [(ngModel)]="user.lastName" />
+          </mat-form-field>
+        </div>
+        <div class="row">
+        <mat-form-field appearance="outline" >
+            <mat-label>{{'columns.email' | transloco}}</mat-label>
+            <input matInput type="email" id="email" [(ngModel)]="user.email">
+          </mat-form-field>
+        <mat-form-field appearance="outline" >
+            <mat-label>{{'columns.phone' | transloco}}</mat-label>
+            <input matInput type="text" id="phone" [(ngModel)]="user.phone">
+          </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-checkbox >{{'columns.blocked' | transloco}}</mat-checkbox>
+    </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="close()">{{'buttons.cancel'|transloco}}</button>
+  <button mat-button (click)="save()" cdkFocusInitial>
+    {{'buttons.save'|transloco}}
+  </button>
+</mat-dialog-actions>
