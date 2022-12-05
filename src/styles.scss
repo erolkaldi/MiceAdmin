@@ -15,3 +15,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
 .tooltip-uppercase {
     text-transform: uppercase;
   }
+
+  ::ng-deep .mat-form-field-wrapper{
+    margin-bottom: -1.25em!important;
+ }

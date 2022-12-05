@@ -1,0 +1,110 @@
+<h2 mat-dialog-title>{{'pages.eventedit'|transloco}}</h2>
+<mat-dialog-content class="mat-typography">
+  <mat-card style="margin: 5px">
+    <mat-card-content>
+      <div class="col-md-2">
+        <div class="row">
+          <mat-form-field appearance="outline">
+            <mat-label>{{'columns.code' | transloco}}</mat-label>
+            <input matInput type="text" id="code" [(ngModel)]="event.code" />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>{{'columns.name' | transloco}}</mat-label>
+            <input matInput type="text" id="name" [(ngModel)]="event.name" />
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field appearance="outline">
+            <mat-label>{{'columns.begindate'|transloco}}</mat-label>
+            <input
+              matInput
+              [matDatepicker]="picker"
+              [(ngModel)]="event.beginDate"
+              (click)="picker.open()"
+              (focus)="picker.open()"
+            />
+
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>{{'columns.enddate' | transloco}}</mat-label>
+            <input
+              matInput
+              [matDatepicker]="picker2"
+              [(ngModel)]="event.endDate"
+              (click)="picker2.open()"
+              (focus)="picker2.open()"
+            />
+
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field appearance="outline">
+            <mat-label>{{'columns.registerbegin'|transloco}}</mat-label>
+            <input
+              matInput
+              [matDatepicker]="picker3"
+              [(ngModel)]="event.registerBegin"
+              (click)="picker3.open()"
+              (focus)="picker3.open()"
+            />
+
+            <mat-datepicker #picker3></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>{{'columns.registerend' | transloco}}</mat-label>
+            <input
+              matInput
+              [matDatepicker]="picker4"
+              [(ngModel)]="event.registerEnd"
+              (click)="picker4.open()"
+              (focus)="picker4.open()"
+            />
+            <mat-datepicker #picker4></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field appearance="outline">
+            <mat-label>{{'columns.type' | transloco}}</mat-label>
+            <mat-select [(ngModel)]="event.eventType" name="type">
+              <mat-option *ngFor="let type of eventTypes" [value]="type.id">
+                {{type.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>{{'columns.feetype' | transloco}}</mat-label>
+            <mat-select [(ngModel)]="event.feeType" name="fee">
+              <mat-option *ngFor="let type of feeTypes" [value]="type.id">
+                {{type.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+      </div>
+        <div class="row">
+          <mat-form-field appearance="outline" >
+              <mat-label>{{'columns.contact' | transloco}}</mat-label>
+              <input matInput type="text" id="contact" [(ngModel)]="event.contact">
+            </mat-form-field>
+        <mat-form-field appearance="outline" >
+            <mat-label>{{'columns.email' | transloco}}</mat-label>
+            <input matInput type="email" id="email" [(ngModel)]="event.email">
+          </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="outline" >
+            <mat-label>{{'columns.phone' | transloco}}</mat-label>
+            <input matInput type="text" id="phone" [(ngModel)]="event.phone">
+          </mat-form-field>
+    </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="close()">{{'buttons.cancel'|transloco}}</button>
+  <button mat-button (click)="save()" cdkFocusInitial>
+    {{'buttons.save'|transloco}}
+  </button>
+</mat-dialog-actions>

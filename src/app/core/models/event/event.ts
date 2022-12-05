@@ -1,4 +1,5 @@
 export class Event{
+    id:string
     code:string=""
     name:string=""
     eventType:string=""

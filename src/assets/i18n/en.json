@@ -1,59 +1,68 @@
 {
-    "global":{
-        "save":"Save",
-        "cancel":"Cancel",
-        "email":"Email",
-        "wellcome":"Wellcome",
-        "firstname":"First Name",
-        "lastname":"Last Name",
-        "next":"Next"
-    },
-    "messages":{
-        "passwordminlength":"Password must be atleast 5 characters",
-        "invalidemail":"Please enter valid email",
-        "emptyfield":"Please fill all fields",
-        "error":"Error!",
-        "warning":"Warning!",
-        "success":"Successfull",
-        "ok":"OK"
-    },
-    "login":{  
-        "password":"Password",
-        "enter":"Log In",
-        "register":"Don't have an account? Register here",
-        "credentials":"Please enter your credentials"
-    },
-    "navbar":{
-        "logout":"Sign Out", 
-        "search":"Search here"
-    },
-    "register":{
-        "gotologin":"Have an account ? Sign in here",
-        "password":"Password",
-        "confirm":"Confirm Password",
-        "companyname":"Company Name",
-        "phone":"Phone Number",
-        "companyinfo":"Company Information",
-        "userinfo":"User Information",
-        "confirmnotmatch":"Confirm Pasword is wrong",
-        "completed":"You have been registered successfully.Please check your email for confirmation"
-    },
-    "pages":{
-        "home":"Home",
-        "events":"Events",
-        "settings":"Settings"
-    },
-    "columns":{
-        "code":"Code",
-        "name":"Name",
-        "begindate":"Begin Date",
-        "enddate":"End Date",
-        "type":"Type"
-    },
-    "buttons":{
-        "add":"Add New",
-        "edit":"Edit",
-        "delete":"Delete",
-        "print":"Print"
-    }
+  "global": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "email": "Email",
+    "wellcome": "Wellcome",
+    "firstname": "First Name",
+    "lastname": "Last Name",
+    "next": "Next"
+  },
+  "messages": {
+    "passwordminlength": "Password must be atleast 5 characters",
+    "invalidemail": "Please enter valid email",
+    "emptyfield": "Please fill all fields",
+    "error": "Error!",
+    "warning": "Warning!",
+    "success": "Successfull",
+    "ok": "OK"
+  },
+  "login": {
+    "password": "Password",
+    "enter": "Log In",
+    "register": "Don't have an account? Register here",
+    "credentials": "Please enter your credentials"
+  },
+  "navbar": {
+    "logout": "Sign Out",
+    "search": "Search here"
+  },
+  "register": {
+    "gotologin": "Have an account ? Sign in here",
+    "password": "Password",
+    "confirm": "Confirm Password",
+    "companyname": "Company Name",
+    "phone": "Phone Number",
+    "companyinfo": "Company Information",
+    "userinfo": "User Information",
+    "confirmnotmatch": "Confirm Pasword is wrong",
+    "completed": "You have been registered successfully.Please check your email for confirmation"
+  },
+  "pages": {
+    "home": "Home",
+    "events": "Events",
+    "settings": "Settings",
+    "eventedit": "Event Edit"
+  },
+  "columns": {
+    "code": "Code",
+    "name": "Name",
+    "begindate": "Begin Date",
+    "enddate": "End Date",
+    "type": "Type",
+    "registerbegin":"Register Begin",
+    "registerend":"Register End",
+    "contact":"Contact Person",
+    "email":"Email",
+    "phone":"Phone Number",
+    "feetype":"Fee Type"
+  },
+  "buttons": {
+    "add": "Add New",
+    "edit": "Edit",
+    "delete": "Delete",
+    "print": "Print",
+    "save": "Save",
+    "cancel": "Cancel"
+  }
 }

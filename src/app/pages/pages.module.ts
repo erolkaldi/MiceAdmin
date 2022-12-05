@@ -23,6 +23,14 @@ import { EventListComponent } from './event-list/event-list.component';
 import { SettingsComponent } from './settings/settings.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { EventEditDialog } from './event-list/event-edit/event-edit';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule, MAT_DATE_FORMATS } from '@angular/material/core';
+import { FORMATS } from '../core/models/date-format/formats';
+import {MatSelectModule} from '@angular/material/select';
+import { EventTypePipe } from './pipes/event-type-pipe';
+import { FeeTypePipe } from './pipes/fee-type-pipe';
 
 @NgModule({
   declarations: [
@@ -33,7 +41,10 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     SidemenuComponent,
     MenuFilterPipe,
     EventListComponent,
-    SettingsComponent
+    SettingsComponent,
+    EventEditDialog,
+    EventTypePipe,
+    FeeTypePipe
   ],
   imports: [
     CommonModule,
@@ -51,9 +62,14 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatTabsModule,
     MatListModule,
     MatTableModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatPaginatorModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSelectModule
     
   ],
+  providers:[{provide: MAT_DATE_FORMATS, useValue: FORMATS}],
   exports:[NavbarComponent,SidemenuComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
