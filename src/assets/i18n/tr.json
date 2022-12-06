@@ -60,7 +60,8 @@
     "email":"E-Posta",
     "phone": "Telefon",
     "feetype":"Ücret Tipi",
-    "blocked":"Bloklandı"
+    "blocked":"Bloklandı",
+    "date":"Tarih"
   },
   "buttons": {
     "add": "Yeni Kayıt",
@@ -68,6 +69,7 @@
     "delete": "Sil",
     "print": "Yazdır",
     "save": "Kaydet",
-    "cancel": "İptal"
+    "cancel": "İptal",
+    "allotment":"Kontenjan"
   }
 }

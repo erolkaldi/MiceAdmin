@@ -34,6 +34,7 @@ import { FeeTypePipe } from './pipes/fee-type-pipe';
 import { UserListComponent } from './users/user-list.component';
 import { UserEditDialog } from './users/user-edit/user-edit';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { EventAllotmentDialog } from './event-list/event-allotment/event-allotment';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     EventTypePipe,
     FeeTypePipe,
     UserListComponent,
-    UserEditDialog
+    UserEditDialog,
+    EventAllotmentDialog
   ],
   imports: [
     CommonModule,

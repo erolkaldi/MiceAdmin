@@ -6,7 +6,7 @@ import { EventTypes } from 'src/app/core/models/event/eventType';
     pure: false
 })
 export class EventTypePipe implements PipeTransform {
-    transform(filter: string): string {
+    transform(filter: number): string {
         if ( !filter) {
             return "";
         }

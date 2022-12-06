@@ -44,7 +44,7 @@
       <th class="pull-right" mat-header-cell *matHeaderCellDef>
         <button
           matTooltip="{{ 'buttons.add' | transloco }}"
-          matTooltipPosition="left"
+          matTooltipPosition="below"
           matTooltipClass="tooltip-uppercase"
           mat-mini-fab
           color="default"
@@ -58,34 +58,30 @@
           color="default"
           let 
           matTooltip="{{ 'buttons.print' | transloco }}"
-          matTooltipPosition="right"
+          matTooltipPosition="below"
           matTooltipClass="tooltip-uppercase"
         >
           <mat-icon>printer</mat-icon>
         </button>
       </th>
       <td class="pull-right" mat-cell *matCellDef="let element">
-        <button
-          mat-mini-fab
-          color="default"
-          matTooltip="{{ 'buttons.edit' | transloco }}"
-          matTooltipPosition="left"
-          matTooltipClass="tooltip-uppercase"
-          (click)="openDialog(element)"
-        >
-          <mat-icon>edit_note</mat-icon>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
         </button>
-        <button
-          class="left-margin"
-          mat-mini-fab
-          color="default"
-          matTooltip="{{ 'buttons.delete' | transloco }}"
-          matTooltipPosition="right"
-          matTooltipClass="tooltip-uppercase"
-          (click)="deleteEvent(element)"
-        >
-          <mat-icon>delete_forever</mat-icon>
-        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="openDialog(element)">
+            <mat-icon>edit_note</mat-icon>
+            <span>{{ 'buttons.edit' | transloco }}</span>
+          </button>
+          <button mat-menu-item (click)="deleteEvent(element)">
+            <mat-icon>delete_forever</mat-icon>
+            <span>{{ 'buttons.delete' | transloco }}</span>
+          </button>
+          <button mat-menu-item (click)="openAllotment(element)">
+            <mat-icon>group_add</mat-icon>
+            <span>{{ 'buttons.allotment' | transloco }}</span>
+          </button>
+        </mat-menu>
       </td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

@@ -1,0 +1,29 @@
+<h2 mat-dialog-title>{{'buttons.allotment'|transloco}}</h2>
+<mat-dialog-content class="mat-typography">
+  <mat-card style="margin: 5px">
+    <mat-card-content>
+      <div class="col-md-2">
+          <div class="row" *ngFor="let item of event.allotments">
+            <mat-form-field appearance="outline">
+                <mat-label>{{'columns.date'|transloco}}</mat-label>
+                <input
+                  matInput
+                  [matDatepicker]="picker"
+                  [(ngModel)]="item.eventDate" disabled="true" />
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+              <mat-form-field appearance="outline" >
+                <mat-label>{{'buttons.allotment' | transloco}}</mat-label>
+                <input matInput type="text" id="contact" [(ngModel)]="item.allotment">
+              </mat-form-field>
+          </div>
+        </div>
+    </mat-card-content>
+  </mat-card>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="close()">{{'buttons.cancel'|transloco}}</button>
+  <button mat-button (click)="save()" cdkFocusInitial>
+    {{'buttons.save'|transloco}}
+  </button>
+</mat-dialog-actions>

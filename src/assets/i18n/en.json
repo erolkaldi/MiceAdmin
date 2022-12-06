@@ -60,7 +60,8 @@
     "email":"Email",
     "phone":"Phone Number",
     "feetype":"Fee Type",
-    "blocked":"Blocked"
+    "blocked":"Blocked",
+    "date":"Date"
   },
   "buttons": {
     "add": "Add New",
@@ -68,6 +69,7 @@
     "delete": "Delete",
     "print": "Print",
     "save": "Save",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "allotment":"Allotment"
   }
 }

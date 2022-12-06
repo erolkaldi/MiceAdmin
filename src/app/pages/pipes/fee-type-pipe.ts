@@ -6,7 +6,7 @@ import { FeeTypes } from 'src/app/core/models/event/feeType';
     pure: false
 })
 export class FeeTypePipe implements PipeTransform {
-    transform(filter: string): string {
+    transform(filter: number): string {
         if ( !filter) {
             return "";
         }

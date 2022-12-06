@@ -1,8 +1,10 @@
+import { Allotment } from "./allotment"
+
 export class Event{
     id:string
     code:string=""
     name:string=""
-    eventType:string=""
+    eventType:number
     beginDate:Date
     endDate:Date
     registerBegin:Date
@@ -10,5 +12,6 @@ export class Event{
     contact:string=""
     email:string=""
     phone:string=""
-    feeType:string=""
+    feeType:number
+    allotments:Allotment[]
 }
