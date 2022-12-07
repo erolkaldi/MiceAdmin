@@ -11,7 +11,15 @@
 
 .mat-toolbar{
     background-color: #2A255B!important;
+    
 }
 .leftspace{
     margin-left: 20px;
 }
+
+:host {
+    display: block;
+    position: sticky; 
+    top: 0;
+    z-index: 999;
+  }
