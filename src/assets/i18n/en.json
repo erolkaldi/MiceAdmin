@@ -17,13 +17,17 @@
     "success": "Successfull",
     "ok": "OK",
     "askdelete":"Are you sure to delete?",
-    "acceptdelete":"Yes delete it!"
+    "acceptdelete":"Yes delete it!",
+    "passwordchanged":"Password Changed!",
+    "confirmresetpassword":"Are you sure to reset your password?",
+    "resetpasswordresult":"Your new password is sent to your email.Please check!"
   },
   "login": {
     "password": "Password",
     "enter": "Log In",
     "register": "Don't have an account? Register here",
-    "credentials": "Please enter your credentials"
+    "credentials": "Please enter your credentials",
+    "resetpasswordlink":"Forgot your password?Reset here"
   },
   "navbar": {
     "logout": "Sign Out",
@@ -32,6 +36,8 @@
   "register": {
     "gotologin": "Have an account ? Sign in here",
     "password": "Password",
+    "newpassword":"New Password",
+    "oldpassword":"Old Password",
     "confirm": "Confirm Password",
     "companyname": "Company Name",
     "phone": "Phone Number",
@@ -39,6 +45,7 @@
     "userinfo": "User Information",
     "confirmnotmatch": "Confirm Pasword is wrong",
     "completed": "You have been registered successfully.Please check your email for confirmation"
+    
   },
   "pages": {
     "home": "Home",
@@ -46,7 +53,10 @@
     "settings": "Settings",
     "eventedit": "Event Edit",
     "users":"Users",
-    "useredit":"User Edit"
+    "useredit":"User Edit",
+    "resetpassword":"Reset Password",
+    "register":"Register",
+    "login":"Login"
   },
   "columns": {
     "code": "Code",
@@ -70,6 +80,8 @@
     "print": "Print",
     "save": "Save",
     "cancel": "Cancel",
-    "allotment":"Allotment"
+    "allotment":"Allotment",
+    "changepassword":"Change-Password",
+    "resetpassword":"Reset Password"
   }
 }

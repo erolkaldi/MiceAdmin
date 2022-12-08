@@ -1,5 +1,5 @@
 <mat-form-field color="basic" class="search">
-    <input matInput type="text" id="searchtext" autocomplete="off" [(ngModel)]="filterArgs.Name">
+    <input matInput type="search" id="srch" autocomplete="one-time-code" [(ngModel)]="filterArgs.Name">
     <button mat-button *ngIf="filterArgs.Name!=''" matSuffix mat-icon-button aria-label="Clear" (click)="clearSearch()">
         <mat-icon>close</mat-icon>
       </button>

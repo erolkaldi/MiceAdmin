@@ -29,12 +29,14 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule, MAT_DATE_FORMATS } from '@angular/material/core';
 import { FORMATS } from '../core/models/date-format/formats';
 import {MatSelectModule} from '@angular/material/select';
-import { EventTypePipe } from './pipes/event-type-pipe';
-import { FeeTypePipe } from './pipes/fee-type-pipe';
+import { EventTypePipe } from './pipes/event-type.pipe';
+import { FeeTypePipe } from './pipes/fee-type.pipe';
 import { UserListComponent } from './users/user-list.component';
 import { UserEditDialog } from './users/user-edit/user-edit';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { EventAllotmentDialog } from './event-list/event-allotment/event-allotment';
+import { ResetPasswordDialog } from './reset-password/change-password/reset-password';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,9 @@ import { EventAllotmentDialog } from './event-list/event-allotment/event-allotme
     FeeTypePipe,
     UserListComponent,
     UserEditDialog,
-    EventAllotmentDialog
+    EventAllotmentDialog,
+    ResetPasswordDialog,
+    ResetPasswordComponent
   ],
   imports: [
     CommonModule,

@@ -13,6 +13,10 @@
         <mat-icon>logout</mat-icon>
         <span>{{'navbar.logout'|transloco}}</span>
       </button>
+      <button mat-menu-item (click)="changePassword()">
+        <mat-icon>lock_reset</mat-icon>
+        <span>{{ 'buttons.changepassword' | transloco }}</span>
+      </button>
     </mat-menu>
     <button mat-mini-fab color="accent" (click)="changeLanguage('tr')" *ngIf="activeLanguage==='en'">
       TR

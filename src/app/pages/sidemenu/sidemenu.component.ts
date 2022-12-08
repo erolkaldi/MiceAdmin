@@ -16,7 +16,7 @@ items:MenuItem[]=[{Name:"pages.home",Url:"home",Icon:"home",Search:"home",Order:
 {Name:"pages.events",Url:"events",Icon:"calendar_month",Search:"events",Order:1},
 {Name:"pages.users",Url:"users",Icon:"people",Search:"users",Order:2},
 {Name:"pages.settings",Url:"settings",Icon:"settings",Search:"settings",Order:3}
-
+//translate yazılacak search alanı için
 
 ]
   ngOnInit(): void {

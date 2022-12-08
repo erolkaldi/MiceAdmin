@@ -17,13 +17,17 @@
     "success": "Başarılı",
     "ok": "Tamam",
     "askdelete":"Silinecek emin misiniz?",
-    "acceptdelete":"Evet sil!"
+    "acceptdelete":"Evet sil!",
+    "passwordchanged":"Şifre Değiştirildi!",
+    "confirmresetpassword":"Are you sure to reset your password?",
+    "resetpasswordresult":"Your new password is sent to your email.Please check!"
   },
   "login": {
     "password": "Şifre",
     "enter": "Giriş Yap",
     "register": "Hesabınız yok mu?Buradan kayıt olun",
-    "credentials": "Lütfen bilgilerinizi giriniz"
+    "credentials": "Lütfen bilgilerinizi giriniz",
+    "resetpasswordlink":"Şifrenizi mi unuttunuz?Buradan sıfırlayın!"
   },
   "navbar": {
     "logout": "Çıkış Yap",
@@ -32,6 +36,8 @@
   "register": {
     "gotologin": "Hesabınız var mı? Buradan giriş yapın",
     "password": "Şifre",
+    "oldpassword":"Eski Şifre",
+    "newpassword":"Yeni Şifre",
     "confirm": "Şifre Tekrarı",
     "companyname": "Şirket Adı",
     "phone": "Telefon",
@@ -46,7 +52,10 @@
     "settings": "Ayarlar",
     "eventedit": "Etkinlik Düzenleme",
     "users":"Kullanıcılar",
-    "useredit":"Kullanıcı Düzenleme"
+    "useredit":"Kullanıcı Düzenleme",
+    "resetpassword":"Şifre Sıfırla",
+    "register":"Yeni Kayıt",
+    "login":"Kullanıcı Girişi"
   },
   "columns": {
     "code": "Kodu",
@@ -70,6 +79,8 @@
     "print": "Yazdır",
     "save": "Kaydet",
     "cancel": "İptal",
-    "allotment":"Kontenjan"
+    "allotment":"Kontenjan",
+    "changepassword":"Şifre Değiştir",
+    "resetpassword":"Şifre Sıfırla"
   }
 }
